@@ -1,0 +1,259 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    margin: 0;
+}
+img{
+    display: block;
+    width: 100%;
+}
+.main-title{
+    text-align: center;
+    font-size: 2.5em;
+    margin: 5px 150px;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-main {
+display: none;
+}
+
+.titulo1{
+    text-align: center;
+    text-align:center;
+    border:1px dotted #000;
+    padding:8px;
+
+}
+.main-header-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+ 
+}
+.icon-menu{
+    
+    font-size: 1.5em;
+    border: 1px solid #4a464b;
+    display: block;
+    padding: 10px ;
+    cursor: pointer;
+   
+}
+.main-header-btn{
+  
+    border: 1px solid  #4a464b;
+    display: block;
+    padding: 10px ;
+    color: #4a464b;
+    text-decoration: none;
+}
+.entry{
+    display: block;
+    padding: 10px;
+}
+
+.main{ 
+    padding: 0 20px;
+
+}
+
+/*slider*/
+.container-slider{
+    margin: 50px 0 ;
+    position: relative;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    width: 400%;
+    height: 350px;
+    margin-left: -100%;
+    position: relative;
+
+}
+.slider:before{
+    content:"";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0,0,0,0.4);
+    height: 100%;
+}
+.slider-section{
+    width: 100%;
+    position: relative;
+}
+.slider-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+
+}
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__btn:hover{
+    background: #fff;
+
+
+}
+.slider__btn--left{
+    left: 10px;
+}
+.slider__btn--right{
+    right: 10px;
+}
+
+.slider-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    z-index:999 ;
+}
+.slider-title{
+    font-size: 2.2em;
+  margin: 0;
+  text-align: center;
+}
+.slider-text{
+    text-align: center;
+   margin: 5px 0;
+}
+.slider-btn{
+    font-size: 1.2em;
+    display: block;
+    border: 1.5px solid  #FD4D03;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    margin:  20px auto;
+    z-index: 999;
+}
+
+/*mainnnn*/
+
+
+
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.product {
+    border: 1px solid #ccc;
+    padding:  20px;
+    text-align: center;
+    position: relative;
+}
+.product::before{
+    content: "ñew";
+    background: #21A0F7;
+    padding: 8.5px 20px;
+    position: absolute;
+    top: 10PX;
+    right: 10px;
+    transform: rotate(-90deg);
+    color: white;
+
+}
+.product-img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+.product-title{
+    text-align: center;
+}
+.producto-price{
+    
+    color:#ff6811 ;
+    font-weight: bold;
+
+}
+.product__icon {
+    display: block;
+    margin: 10px 0;
+}
+
+
+
+.container-editor{
+    margin-top: 50px;
+
+}
+
+.editor-item{
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.editor-img{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+.editor-circulo{
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -200px;
+    right: -150px;
+    color: white;
+    padding: 20px;
+    padding-bottom: 70px;
+    padding-right: 50px;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.5s;
+
+}
+.editor-item:hover .editor-circulo{
+    transform: scale(1.2);
+    bottom: -90px;
+    right: -50px;
+}
+
+.editor-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.editor-item:hover::before{
+    opacity: 1;
+}
